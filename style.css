@@ -1,0 +1,204 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: xx-large;
+}
+
+/* Header and Navigation Styles */
+header {
+  background-color: #ffffff;
+  font-style: italic;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  margin: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000000;
+  border-radius: 10px;
+  padding-right: 10px;
+}
+
+/* Hero Section Styles */
+.hero {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in;
+}
+
+.hero:hover img {
+  transform: scale(1.5);
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  padding: 30px;
+  opacity: 0;
+  animation: slideInUp 1s forwards;
+}
+
+
+@keyframes slideInUp {
+  from {
+    transform: translate(-50%, -30%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+/* Features Section Styles */
+.features-1 {
+  padding: 40px;
+  text-align: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.features-1:hover {
+  transform: translateY(-50px);
+}
+
+.feature {
+  margin-bottom: 40px;
+}
+
+/* About Me Section Styles */
+.about-me {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.about-content {
+  flex: 1;
+  max-width: 60%;
+  padding: 20px;
+}
+
+.about-me img {
+  max-width: 30%;
+  height: auto;
+  border-radius: 10%;
+  transform: rotate(10deg);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.about-me:hover img {
+  transform: translateY(-50px);
+  transform: scale(1);
+  padding: 10px;
+}
+
+/* Feature2 Section Styles */
+.feature2 {
+  background-color: #a1a1a1;
+  padding: 60px 60px;
+  text-align: center;
+}
+
+.feature2 h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+.feature2 p {
+  font-size: 18px;
+  color: #555555;
+  line-height: 1.5;
+}
+
+.feature2 ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.feature2 li {
+  margin-bottom: 15px;
+}
+
+/* Parallax Background */
+.parallax-bg {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Overlay for Parallax Background */
+.parallax-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Footer Styles */
+footer {
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  nav ul {
+    text-align: center;
+  }
+
+  .hero-content {
+    padding: 20px;
+  }
+
+  .features-1,
+  .feature2 {
+    padding: 20px;
+  }
+
+  .feature2 p {
+    font-size: 16px;
+  }
+}
